@@ -19,7 +19,15 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"allowJs": true
+		"allowJs": true,
+
+		"typeRoots": ["./types", "./node_modules/@types"],
+		"baseUrl": ".",
+		"paths": {
+			"$types": ["src/typeDefs"],
+			"$store": ["src/store"],
+			"$components/*": ["src/components/", "src/components/*"]
+		}
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }]
